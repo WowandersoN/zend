@@ -113,7 +113,7 @@ class SiteController extends Controller
                 ->where(['>', 'price', $price[0]])
                 ->andWhere(['<', 'price', $price[1]])
                 ->orderBy(['price' => SORT_ASC])
-                ->from('zend')
+                ->from('wine')
                 ->limit(100)
                 ->all();
         }
@@ -126,7 +126,7 @@ class SiteController extends Controller
                         ->orMatch(['name_en' => $data['name']])
                 )
                 ->orderBy(['id' => SORT_ASC])
-                ->from('zend')
+                ->from('wine')
                 ->limit(100)
                 ->all();
 
